@@ -1,0 +1,20 @@
+{
+	"name": "kpmg_books",
+	"version": "1.0.0",
+	"description": "",
+	"main": "index.js",
+	"scripts": {
+		"test": "echo \"Error: no test specified\" && exit 1",
+		"frontend": "cd frontend && yarn serve",
+		"backend": "cd backend && npm run start",
+		"dev": "concurrently \"npm run backend\" \"npm run frontend\"",
+		"setupFrontend": "cd frontend && yarn install",
+		"setupBackend": "cd backend && npm install",
+		"setup": "concurrently \"npm run setupBackend\" \"npm run setupFrontend\""
+	},
+	"author": "",
+	"license": "ISC",
+	"devDependencies": {
+		"concurrently": "^5.3.0"
+	}
+}
