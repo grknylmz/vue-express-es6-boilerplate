@@ -21,3 +21,5 @@ npm run dev
 ```
 
 try localhost:8080 for frontend and localhost:5000/books for examples
+
+![alt text](https://github.com/grknylmz/vue-express-es6-boilerplate/blob/main/screenshot.png?raw=true)
