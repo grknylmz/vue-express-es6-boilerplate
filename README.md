@@ -1,6 +1,6 @@
 # vue-express-es6-boilerplate
 
-Vue - Express boilerplate with barebone functionality
+Easy setup Vue - Express boilerplate with barebone functionality
 
 Setup script will be installing the dependencies for both frontend and the backend
 
