@@ -6,10 +6,7 @@ import securityConfig from '../config/development/security.json';
 import dotenv from 'dotenv';
 // #endregion
 
-Promise.all([
-	//initDb(dbConfig.cnd)
-	dotenv.config(),
-])
+Promise.all([initDb(), dotenv.config()])
 	.then(async ([dbConnection]) => {
 		const PORT = process.env.PORT || 5000;
 		const app = await appLication(dbConnection, corsConfig, securityConfig);
