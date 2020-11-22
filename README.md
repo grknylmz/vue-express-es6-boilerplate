@@ -9,6 +9,19 @@ Frontend uses Vuetify for UI
 
 ## Usage
 
+configure your env variables within .env in both frontend and backend
+like this
+
+```
+DB_HOST=localhost
+DB_USER=
+DB_PASS=
+NODE_ENV=development
+PORT=5000
+```
+
+then;
+
 ```
 npm install
 npm run setup

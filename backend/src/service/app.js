@@ -18,21 +18,16 @@ import BookController from '../service/controllers/bookController';
 import BookRouter from '../service/routes/bookRouter';
 // #endregion
 
-export default async function (
-	logger,
-	dbConnection,
-	corsConfig,
-	securityConfig
-) {
+export default async function (dbConnection, corsConfig, securityConfig) {
 	var app = express();
 
 	const userRepository = new ModelOfTRepository(UserModel(dbConnection));
-	const userController = new UserController(userRepository, logger);
+	const userController = new UserController(userRepository);
 	const userRouter = new UserRouter(userRepository, userController);
-	const bookController = new BookController({}, logger);
+	const bookController = new BookController({});
 	const bookRouter = new BookRouter({}, bookController);
 
-	middlewareLogging(app, logger);
+	middlewareLogging(app);
 	middlewareRequestParser(app);
 	middlewarePassport(app, userRepository, securityConfig);
 	middlewareCors(app, corsConfig);

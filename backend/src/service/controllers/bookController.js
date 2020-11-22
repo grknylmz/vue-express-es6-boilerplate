@@ -2,12 +2,12 @@ import ApiController from './apiController';
 import { getToken } from '../middleware/middleware-passport';
 
 class BookController extends ApiController {
-	constructor(bookRepository, logger) {
+	constructor(bookRepository) {
 		super();
 		this._bookRepository = bookRepository;
 	}
 
-	get UserRepository() {
+	get BookRepository() {
 		return this._bookRepository;
 	}
 	getBooks(req, res) {

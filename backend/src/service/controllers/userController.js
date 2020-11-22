@@ -2,7 +2,7 @@ import ApiController from './apiController';
 import { getToken } from '../middleware/middleware-passport';
 
 class UserController extends ApiController {
-	constructor(userRepository, logger) {
+	constructor(userRepository) {
 		super();
 		this._userReposotory = userRepository;
 	}
