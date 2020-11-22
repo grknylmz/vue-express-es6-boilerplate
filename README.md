@@ -9,7 +9,7 @@ Frontend uses Vuetify for UI
 
 ## Usage
 
-configure your env variables within .env in both frontend and backend
+configure your environment variables within .env in backend
 like this
 
 ```
